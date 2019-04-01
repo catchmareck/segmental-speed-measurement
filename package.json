@@ -1,0 +1,19 @@
+{
+  "name": "segmental-speed-measurement",
+  "version": "1.0.0",
+  "description": "Imitation of the real world use case to measure the average speed of the car on some road",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catchmareck/segmental-speed-measurement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catchmareck/segmental-speed-measurement/issues"
+  },
+  "homepage": "https://github.com/catchmareck/segmental-speed-measurement#readme"
+}
