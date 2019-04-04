@@ -18,6 +18,10 @@
   "homepage": "https://github.com/catchmareck/segmental-speed-measurement#readme",
   "dependencies": {
     "aws-sdk": "^2.432.0",
-    "node-uuid": "^1.4.8"
+    "busboy": "latest",
+    "express": "~4.16.0",
+    "node-sass-middleware": "0.11.0",
+    "pug": "2.0.0-beta11",
+    "uuid": "^3.3.2"
   }
 }
