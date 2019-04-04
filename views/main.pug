@@ -1,9 +1,13 @@
 extends layout
 
 block main
+    .row.mb-5
+        .col-md-12
+            p.h1.text-center
+                i.fas.fa-car.fa-10x
     .row
         .col-md-6
-            p Bramka na wjeździe
+            p.h1.text-center Bramka na wjeździe
             .file-upload-wrapper
                 .card.card-body.view.file-upload
                     .card-text.file-upload-message
@@ -26,9 +30,9 @@ block main
                                     span.file-upload-filename-inner
                                 p.file-upload-infos-message Drag and drop or click to replace
             .d-flex.justify-content-center
-                button#entry-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+                button#entry-submit.btn.btn-mdb-color.btn-rounded.float-left.mt-3(type='submit') Submit
         .col-md-6
-            p Bramka na wyjeździe
+            p.h1.text-center Bramka na wyjeździe
             .file-upload-wrapper
                 .card.card-body.view.file-upload
                     .card-text.file-upload-message
@@ -51,7 +55,9 @@ block main
                                     span.file-upload-filename-inner
                                 p.file-upload-infos-message Drag and drop or click to replace
             .d-flex.justify-content-center
-                button#out-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+                button#out-submit.btn.btn-mdb-color.btn-rounded.float-left.mt-3(type='submit') Submit
+    hr.my-5
+    h2.text-center Mandaty
     .row
         .col-md-12
             .table-responsive
