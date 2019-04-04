@@ -28,7 +28,7 @@ exports.handler = async (event) => {
         
         const entries = response.Items;
 
-        if (entries.length <= 1){
+        if (entries.length <= 1 || entries.length % 2 !== 0){
             return {
                 statusCode: 200,
                 body: JSON.stringify('ok'),
