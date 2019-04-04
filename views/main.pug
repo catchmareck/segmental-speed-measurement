@@ -1,42 +1,73 @@
 extends layout
 
 block main
-    section.magazine-section.my-5
-        .row
-            .col-md-6
-                p Bramka na wjeździe
-                form.md-form
-                    .file-field
-                        .z-depth-1-half.mb-4
-                            img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/placeholder.jpg', alt='example placeholder')
-                            input#entry-photo(type='file')
-                        .d-flex.justify-content-center
-                            button#entry-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
-            .col-md-6
-                p Bramka na wyjeździe
-                form.md-form
-                    .file-field
-                        .z-depth-1-half.mb-4
-                            img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/placeholder.jpg', alt='example placeholder')
-                            input#out-photo(type='file')
-                        .d-flex.justify-content-center
-                            button#out-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
-        .row
-            .col-md-12
-                .table-responsive
-                    table.table
-                        thead
+    .row
+        .col-md-6
+            p Bramka na wjeździe
+            .file-upload-wrapper
+                .card.card-body.view.file-upload
+                    .card-text.file-upload-message
+                        i.fas.fa-cloud-upload-alt
+                        p Drag and drop a file here or click
+                        p.file-upload-error Ooops, something wrong happended.
+                    .mask.rgba-stylish-slight
+                    img#entry-preview(src="")
+                    .file-upload-errors-container
+                        ul
+                    input#entry-photo.file_upload(type='file')
+                    button.btn.btn-sm.btn-danger(type='button')
+                        | Remove
+                        i.far.fa-trash-alt.ml-1
+                    .file-upload-preview
+                        span.file-upload-render
+                        .file-upload-infos
+                            .file-upload-infos-inner
+                                p.file-upload-filename
+                                    span.file-upload-filename-inner
+                                p.file-upload-infos-message Drag and drop or click to replace
+            .d-flex.justify-content-center
+                button#entry-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+        .col-md-6
+            p Bramka na wyjeździe
+            .file-upload-wrapper
+                .card.card-body.view.file-upload
+                    .card-text.file-upload-message
+                        i.fas.fa-cloud-upload-alt
+                        p Drag and drop a file here or click
+                        p.file-upload-error Ooops, something wrong happended.
+                    .mask.rgba-stylish-slight
+                    img#out-preview(src="")
+                    .file-upload-errors-container
+                        ul
+                    input#out-photo.file_upload(type='file')
+                    button.btn.btn-sm.btn-danger(type='button')
+                        | Remove
+                        i.far.fa-trash-alt.ml-1
+                    .file-upload-preview
+                        span.file-upload-render
+                        .file-upload-infos
+                            .file-upload-infos-inner
+                                p.file-upload-filename
+                                    span.file-upload-filename-inner
+                                p.file-upload-infos-message Drag and drop or click to replace
+            .d-flex.justify-content-center
+                button#out-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+    .row
+        .col-md-12
+            .table-responsive
+                table.table
+                    thead
+                        tr
+                            th(scope='col') #
+                            th(scope='col') Plate
+                            th(scope='col') Time
+                            th(scope='col') Amount
+                            th(scope='col') Currency
+                    tbody
+                        each item, index in items
                             tr
-                                th(scope='col') #
-                                th(scope='col') Plate
-                                th(scope='col') Time
-                                th(scope='col') Amount
-                                th(scope='col') Currency
-                        tbody
-                            each item, index in items
-                                tr
-                                    th(scope='row')=index+1
-                                    td=item.Plate
-                                    td=item.Time
-                                    td=item.Amount
-                                    td=item.Currency
+                                th(scope='row')=index+1
+                                td=item.Plate
+                                td=item.Time
+                                td=item.Amount
+                                td=item.Currency
