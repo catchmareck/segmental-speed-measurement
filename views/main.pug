@@ -1,0 +1,42 @@
+extends layout
+
+block main
+    section.magazine-section.my-5
+        .row
+            .col-md-6
+                p Bramka na wjeździe
+                form.md-form
+                    .file-field
+                        .z-depth-1-half.mb-4
+                            img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/placeholder.jpg', alt='example placeholder')
+                            input#entry-photo(type='file')
+                        .d-flex.justify-content-center
+                            button#entry-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+            .col-md-6
+                p Bramka na wyjeździe
+                form.md-form
+                    .file-field
+                        .z-depth-1-half.mb-4
+                            img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/placeholder.jpg', alt='example placeholder')
+                            input#out-photo(type='file')
+                        .d-flex.justify-content-center
+                            button#out-submit.btn.btn-mdb-color.btn-rounded.float-left(type='submit') Submit
+        .row
+            .col-md-12
+                .table-responsive
+                    table.table
+                        thead
+                            tr
+                                th(scope='col') #
+                                th(scope='col') Plate
+                                th(scope='col') Time
+                                th(scope='col') Amount
+                                th(scope='col') Currency
+                        tbody
+                            each item, index in items
+                                tr
+                                    th(scope='row')=index+1
+                                    td=item.Plate
+                                    td=item.Time
+                                    td=item.Amount
+                                    td=item.Currency

@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet', href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.5.12.min.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+    body
+        main.mt-5.pt-5
+            .container
+                .row
+                    block main
+
+        script(src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.5.12.min.js')
+        script(src='/scripts/main.js')
+        script $('.mdb-select').materialSelect();
