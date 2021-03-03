@@ -21,7 +21,7 @@
     "busboy": "latest",
     "express": "~4.16.0",
     "node-sass-middleware": "0.11.0",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "uuid": "^3.3.2"
   }
 }
